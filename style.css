@@ -323,6 +323,41 @@ h2 {
   color: var(--clr-white);
 }
 
+.res-link-locked {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.res-link-locked:hover {
+  background: var(--clr-bg);
+  border-color: var(--clr-border);
+  color: var(--clr-text-light);
+}
+
+/* ---------- Toast ---------- */
+.toast {
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--clr-primary);
+  color: var(--clr-white);
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  box-shadow: var(--shadow-lg);
+}
+
+.toast.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
 /* ---------- Tool Grid ---------- */
 .tool-grid {
   display: grid;
